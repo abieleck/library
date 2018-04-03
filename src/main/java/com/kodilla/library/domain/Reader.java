@@ -1,5 +1,6 @@
 package com.kodilla.library.domain;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
@@ -8,6 +9,7 @@ import java.sql.Date;
 
 @Entity
 @Table(name = "READERS")
+@AllArgsConstructor
 @NoArgsConstructor
 @Getter
 public class Reader {

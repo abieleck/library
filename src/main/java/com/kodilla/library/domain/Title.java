@@ -5,9 +5,13 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-
+@NamedQuery(
+        name = "Title.getByAuthor",
+        query = "FROM Title WHERE author.id = :AUTHOR_ID"
+)
 @Entity
 @Table(name = "TITLES")
+@AllArgsConstructor
 @NoArgsConstructor
 @Getter
 public class Title {
@@ -15,7 +19,7 @@ public class Title {
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     @Column(name = "ID")
-    private Long Id;
+    private Long id;
 
     @Column(name = "TITLE", length = 300, nullable = false)
     private String title;
@@ -25,7 +29,7 @@ public class Title {
     private Author author;
 
     @Column(name="ISSUE_YEAR")
-    private int issueYear;
+    private Integer issueYear;
 
     public Title(String title, Author author, int issueYear) {
         this.title = title;

@@ -7,8 +7,23 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 import java.sql.Date;
 
+@NamedQueries({
+        @NamedQuery(
+                name = "Borrow.getActiveByBook",
+                query = "FROM Borrow WHERE book.id = :BOOK_ID AND returnDate is null"
+        ),
+        @NamedQuery(
+                name = "Borrow.getByReader",
+                query = "FROM Borrow WHERE reader.id = :READER_ID"
+        ),
+        @NamedQuery(
+                name = "Borrow.getActiveByReader",
+                query = "FROM Borrow WHERE reader.id = :READER_ID AND returnDate is null"
+        )
+})
 @Entity
 @Table(name = "BORROWS")
+@AllArgsConstructor
 @NoArgsConstructor
 @Getter
 public class Borrow {
@@ -19,11 +34,11 @@ public class Borrow {
     private Long id;
 
     @ManyToOne
-    @JoinColumn(name = "BOOK_ID")
+    @JoinColumn(name = "BOOK_ID", nullable = false)
     private Book book;
 
     @ManyToOne
-    @JoinColumn(name = "READER_ID")
+    @JoinColumn(name = "READER_ID", nullable = false)
     private Reader reader;
 
     @Column(name = "BORROW_DATE", nullable = false)
