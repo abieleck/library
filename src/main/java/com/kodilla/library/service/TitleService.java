@@ -2,8 +2,8 @@ package com.kodilla.library.service;
 
 import com.kodilla.library.controller.exception.AuthorNotFoundException;
 import com.kodilla.library.controller.exception.TitleNotFoundException;
-import com.kodilla.library.domain.Author;
-import com.kodilla.library.domain.Title;
+import com.kodilla.library.model.Author;
+import com.kodilla.library.model.Title;
 import com.kodilla.library.repository.TitleRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

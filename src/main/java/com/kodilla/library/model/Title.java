@@ -1,5 +1,6 @@
-package com.kodilla.library.domain;
+package com.kodilla.library.model;
 
+import com.kodilla.library.model.Author;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

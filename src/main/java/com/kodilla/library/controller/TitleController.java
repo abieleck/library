@@ -3,9 +3,9 @@ package com.kodilla.library.controller;
 import com.kodilla.library.controller.exception.AuthorNotFoundException;
 import com.kodilla.library.controller.exception.BookNotAvailableForTitle;
 import com.kodilla.library.controller.exception.TitleNotFoundException;
-import com.kodilla.library.domain.BookDto;
-import com.kodilla.library.domain.Title;
-import com.kodilla.library.domain.TitleDto;
+import com.kodilla.library.dto.BookDto;
+import com.kodilla.library.model.Title;
+import com.kodilla.library.dto.TitleDto;
 import com.kodilla.library.mapper.BookMapper;
 import com.kodilla.library.mapper.TitleMapper;
 import com.kodilla.library.service.BookService;
@@ -20,7 +20,7 @@ import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 
 @RestController
 @CrossOrigin("*")
-@RequestMapping("/title")
+@RequestMapping("/v1/title")
 public class TitleController {
 
     @Autowired

@@ -1,7 +1,7 @@
 package com.kodilla.library.mapper;
 
-import com.kodilla.library.domain.Reader;
-import com.kodilla.library.domain.ReaderDto;
+import com.kodilla.library.model.Reader;
+import com.kodilla.library.dto.ReaderDto;
 import org.springframework.stereotype.Component;
 
 @Component

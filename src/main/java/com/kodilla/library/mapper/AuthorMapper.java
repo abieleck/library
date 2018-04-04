@@ -1,7 +1,7 @@
 package com.kodilla.library.mapper;
 
-import com.kodilla.library.domain.Author;
-import com.kodilla.library.domain.AuthorDto;
+import com.kodilla.library.model.Author;
+import com.kodilla.library.dto.AuthorDto;
 import org.springframework.stereotype.Component;
 
 @Component

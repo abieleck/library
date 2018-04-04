@@ -1,7 +1,7 @@
 package com.kodilla.library.mapper;
 
-import com.kodilla.library.domain.Borrow;
-import com.kodilla.library.domain.BorrowDto;
+import com.kodilla.library.model.Borrow;
+import com.kodilla.library.dto.BorrowDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

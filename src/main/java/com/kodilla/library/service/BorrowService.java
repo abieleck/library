@@ -1,10 +1,10 @@
 package com.kodilla.library.service;
 
 import com.kodilla.library.controller.exception.*;
-import com.kodilla.library.domain.Book;
-import com.kodilla.library.domain.BookStatus;
-import com.kodilla.library.domain.Borrow;
-import com.kodilla.library.domain.Reader;
+import com.kodilla.library.model.Book;
+import com.kodilla.library.model.BookStatus;
+import com.kodilla.library.model.Borrow;
+import com.kodilla.library.model.Reader;
 import com.kodilla.library.repository.BorrowRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

@@ -1,6 +1,6 @@
 package com.kodilla.library.repository;
 
-import com.kodilla.library.domain.Title;
+import com.kodilla.library.model.Title;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.Param;

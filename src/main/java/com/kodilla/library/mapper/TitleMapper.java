@@ -1,7 +1,7 @@
 package com.kodilla.library.mapper;
 
-import com.kodilla.library.domain.Title;
-import com.kodilla.library.domain.TitleDto;
+import com.kodilla.library.model.Title;
+import com.kodilla.library.dto.TitleDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

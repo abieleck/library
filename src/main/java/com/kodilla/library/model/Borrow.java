@@ -1,4 +1,4 @@
-package com.kodilla.library.domain;
+package com.kodilla.library.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

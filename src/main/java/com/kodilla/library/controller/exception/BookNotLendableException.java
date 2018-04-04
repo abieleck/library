@@ -1,6 +1,6 @@
 package com.kodilla.library.controller.exception;
 
-import com.kodilla.library.domain.BookStatus;
+import com.kodilla.library.model.BookStatus;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;
 

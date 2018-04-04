@@ -1,9 +1,9 @@
 package com.kodilla.library.controller;
 
 import com.kodilla.library.controller.exception.AuthorNotFoundException;
-import com.kodilla.library.domain.Author;
-import com.kodilla.library.domain.AuthorDto;
-import com.kodilla.library.domain.TitleDto;
+import com.kodilla.library.model.Author;
+import com.kodilla.library.dto.AuthorDto;
+import com.kodilla.library.dto.TitleDto;
 import com.kodilla.library.mapper.AuthorMapper;
 import com.kodilla.library.mapper.TitleMapper;
 import com.kodilla.library.service.AuthorService;
@@ -18,7 +18,7 @@ import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 
 @RestController
 @CrossOrigin("*")
-@RequestMapping("/author")
+@RequestMapping("/v1/author")
 public class AuthorController {
     @Autowired
     AuthorMapper authorMapper;

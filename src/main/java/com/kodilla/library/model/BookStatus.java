@@ -1,4 +1,4 @@
-package com.kodilla.library.domain;
+package com.kodilla.library.model;
 
 public enum BookStatus {
     IN_CIRCULATION,

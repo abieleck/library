@@ -1,4 +1,4 @@
-package com.kodilla.library.domain;
+package com.kodilla.library.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;

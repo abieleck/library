@@ -1,4 +1,4 @@
-package com.kodilla.library.domain;
+package com.kodilla.library.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
@@ -8,12 +8,14 @@ import lombok.NoArgsConstructor;
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
-public class BookDto {
-
+public class TitleDto {
     private Long id;
 
-    @JsonProperty("title")
-    private TitleDto titleDto;
+    private String title;
 
-    private BookStatus status;
+    @JsonProperty("author")
+    private AuthorDto authorDto;
+
+    private Integer issueYear;
+
 }

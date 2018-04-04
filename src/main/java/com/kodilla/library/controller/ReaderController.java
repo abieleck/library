@@ -1,9 +1,9 @@
 package com.kodilla.library.controller;
 
 import com.kodilla.library.controller.exception.ReaderNotFoundException;
-import com.kodilla.library.domain.BorrowDto;
-import com.kodilla.library.domain.Reader;
-import com.kodilla.library.domain.ReaderDto;
+import com.kodilla.library.dto.BorrowDto;
+import com.kodilla.library.model.Reader;
+import com.kodilla.library.dto.ReaderDto;
 import com.kodilla.library.mapper.BorrowMapper;
 import com.kodilla.library.mapper.ReaderMapper;
 import com.kodilla.library.service.BorrowService;
@@ -18,7 +18,7 @@ import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 
 @RestController
 @CrossOrigin("*")
-@RequestMapping("/reader")
+@RequestMapping("/v1/reader")
 public class ReaderController {
 
     @Autowired
@@ -26,12 +26,6 @@ public class ReaderController {
 
     @Autowired
     ReaderService readerService;
-
-    @Autowired
-    BorrowService borrowService;
-
-    @Autowired
-    BorrowMapper borrowMapper;
 
     @RequestMapping(method = RequestMethod.POST, consumes = APPLICATION_JSON_VALUE)
     public ReaderDto createNew(@RequestBody ReaderDto readerDto) {
@@ -45,17 +39,4 @@ public class ReaderController {
         return readerMapper.mapToReaderDto(readerService.getById(id));
     }
 
-    @RequestMapping(method = RequestMethod.GET, value = "/{id}/borrows")
-    public List<BorrowDto> getBorrows(@PathVariable long id) throws ReaderNotFoundException {
-        return borrowService.getByReader(id).stream()
-                .map(borrowMapper::mapToBorrowDto)
-                .collect(Collectors.toList());
-    }
-
-    @RequestMapping(method = RequestMethod.GET, value = "/{id}/borrows/active")
-    public List<BorrowDto> getActiveBorrows(@PathVariable long id) throws ReaderNotFoundException {
-        return borrowService.getActiveByReader(id).stream()
-                .map(borrowMapper::mapToBorrowDto)
-                .collect(Collectors.toList());
-    }
 }
